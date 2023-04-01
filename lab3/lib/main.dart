@@ -55,6 +55,13 @@ class _MyHomePageState extends State<MyHomePage> {
     });
   }
 
+  void _incrementCounterFive() {
+    setState(() {
+      
+      _counter=_counter+5;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
    
@@ -88,7 +95,10 @@ class _MyHomePageState extends State<MyHomePage> {
            child: Text("-1"), 
            style: ElevatedButton.styleFrom(primary: Colors.red)),
 
-           
+           ElevatedButton(onPressed: _incrementCounterFive,
+           child: Text("+5"), 
+           style: ElevatedButton.styleFrom(primary: Color.fromARGB(255, 29, 196, 241))),
+
           ]
            ),
 
